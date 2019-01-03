@@ -90,5 +90,9 @@ class Raincast_WeatherUITests: XCTestCase {
     func testGoButtonDisplayedTextLabel() {
         let app = XCUIApplication()
     }
+    
+    func testThatInfoLabelIsDisplayed() {
+        let app = XCUIApplication()
+    }
 
 }
