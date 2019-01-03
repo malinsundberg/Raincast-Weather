@@ -27,8 +27,68 @@ class Raincast_WeatherUITests: XCTestCase {
     }
 
     func testExample() {
+        
+        
+//        app.navigationBars["Current Weather"].buttons["Go!"].tap()
+//        app.otherElements.containing(.navigationBar, identifier:"Current Weather").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element.tap()
+//        app.staticTexts["This is the label indicating the weather forcast"].tap()
+//        app.staticTexts["Enter the location that you want to see the raincast for!"].tap()
+        
+        
+        
+//        app.buttons["Button"].tap()
+        
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testThatInstructionTextIsDisplayed() {
+        let app = XCUIApplication()
+        let instructionLabel = app.staticTexts["Enter the location that you want to see the raincast for!"]
+        
+        XCTAssertTrue(instructionLabel.exists)
+    }
+    
+    func testThatTextFieldExists() {
+        let app = XCUIApplication()
+        let textFieldElement = app.textFields.containing(.button, identifier:"Clear text").element
+        XCTAssertTrue(textFieldElement.exists)
+    }
+    
+    func testThatTextFieldIsTappable() {
+        let app = XCUIApplication()
+        
+        let textFieldElement = app.textFields.containing(.button, identifier:"Clear text").element
+        
+        XCTAssertTrue(textFieldElement.exists)
+        XCTAssertTrue(textFieldElement.isEnabled)
+        
+        XCTAssertTrue(textFieldElement.value as! String == "Vancouver")
+    }
+    
+    func testThatTextRemovedWhenTextFieldTapped() {
+        let app = XCUIApplication()
+        
+        let textFieldElement = app.textFields.containing(.button, identifier:"Clear text").element
+        
+        XCTAssertTrue(textFieldElement.exists)
+        XCTAssertTrue(textFieldElement.isEnabled)
+        
+        XCTAssertTrue(textFieldElement.value as! String == "Vancouver")
+        
+        textFieldElement.tap()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            XCTAssertTrue(textFieldElement.value as! String != "Vancouver")
+        })
+    }
+    
+    func testGoButtonExists() {
+        let app = XCUIApplication()
+    }
+    
+    func testGoButtonDisplayedTextLabel() {
+        let app = XCUIApplication()
     }
 
 }
