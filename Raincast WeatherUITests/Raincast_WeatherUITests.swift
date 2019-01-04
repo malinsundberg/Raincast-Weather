@@ -85,9 +85,19 @@ class Raincast_WeatherUITests: XCTestCase {
     
     func testGoButtonExists() {
         let app = XCUIApplication()
+        let goButton = app.navigationBars["Current Weather"].buttons["Go!"]
+        
+        XCTAssertTrue(goButton.exists)
     }
     
-    func testGoButtonDisplayedTextLabel() {
+    func testGoButtonIsTappable() {
+        let app = XCUIApplication()
+        let goButton = app.navigationBars["Current Weather"].buttons["Go!"]
+        
+        XCTAssertTrue(goButton.isHittable)
+    }
+    
+    func testGoButtonDisplaysTextLabel() {
         let app = XCUIApplication()
     }
     
