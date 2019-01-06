@@ -13,7 +13,7 @@
         <!--Current Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Raincast_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CurrentWeatherViewController" customModule="Raincast_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtL-xZ-tD3">
                                         <rect key="frame" x="285" y="10" width="46" height="30"/>
+                                        <color key="tintColor" red="0.29123759269999999" green="0.62754619119999999" blue="0.93337327240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
@@ -74,6 +75,12 @@
                                 <state key="normal" title=" Details ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89452196477102164" green="0.90338973974012671" blue="0.9132731541450777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -97,9 +104,17 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Current Weather" id="juT-SE-QPR">
-                        <barButtonItem key="rightBarButtonItem" title="Go!" id="TSp-K0-MSM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Go!" id="TSp-K0-MSM">
+                            <connections>
+                                <action selector="displayWeatherButtonAction:" destination="BYZ-38-t0r" id="6gW-eL-cEs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="currentWeatherLabel" destination="t2B-w2-U0T" id="YFH-bM-ZAZ"/>
+                        <outlet property="detailsButton" destination="yBH-cV-r9u" id="1x9-RD-Prs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,4 +158,5 @@
             <point key="canvasLocation" x="287" y="133"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

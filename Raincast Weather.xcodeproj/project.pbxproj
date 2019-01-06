@@ -14,6 +14,7 @@
 		F441780021D3500F009748D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44177FE21D3500F009748D3 /* LaunchScreen.storyboard */; };
 		F441780B21D3500F009748D3 /* Raincast_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441780A21D3500F009748D3 /* Raincast_WeatherTests.swift */; };
 		F441781621D3500F009748D3 /* Raincast_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */; };
+		F4619F1C21E1700B003B9F1D /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F441781121D3500F009748D3 /* Raincast WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Raincast WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raincast_WeatherUITests.swift; sourceTree = "<group>"; };
 		F441781721D3500F009748D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F44177F421D3500D009748D3 /* Raincast Weather */ = {
 			isa = PBXGroup;
 			children = (
+				F4619F1A21E16FBA003B9F1D /* Current Weather */,
 				F44177F521D3500D009748D3 /* AppDelegate.swift */,
 				F44177F721D3500D009748D3 /* ViewController.swift */,
 				F44177F921D3500D009748D3 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				F441781721D3500F009748D3 /* Info.plist */,
 			);
 			path = "Raincast WeatherUITests";
+			sourceTree = "<group>";
+		};
+		F4619F1A21E16FBA003B9F1D /* Current Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */,
+			);
+			path = "Current Weather";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				F44177F821D3500D009748D3 /* ViewController.swift in Sources */,
 				F44177F621D3500D009748D3 /* AppDelegate.swift in Sources */,
+				F4619F1C21E1700B003B9F1D /* CurrentWeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
