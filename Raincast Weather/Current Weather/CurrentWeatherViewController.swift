@@ -26,16 +26,31 @@ class CurrentWeatherViewController: UIViewController {
         }
     }
     
+    @IBAction func locationTextFieldTouchDownAction(_ sender: Any) {
+        shouldDisplayAdditionalInfo = false
+    }
+    
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var currentWeatherLabel: UILabel!
     @IBOutlet weak var detailsButton: UIButton!
     
     @IBAction func displayWeatherButtonAction(_ sender: UIBarButtonItem) {
+        setCurrentWeatherLabelText()
         shouldDisplayAdditionalInfo = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        setInfoLabelText()
         shouldDisplayAdditionalInfo = false
+    }
+    
+    private func setInfoLabelText() {
+        infoLabel.text = String.CurrentWeatherTexts.infoText
+    }
+    
+    private func setCurrentWeatherLabelText() {
+        currentWeatherLabel.text = String.CurrentWeatherTexts.currentWeatherVancouverText
     }
 }

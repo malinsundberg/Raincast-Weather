@@ -24,7 +24,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the location that you want to see the raincast for!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-mK-5iK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label will display crusial information telling the user how to use the app" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-mK-5iK">
                                 <rect key="frame" x="22" y="281.5" width="331" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -39,19 +39,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-Pg-aP6">
                                 <rect key="frame" x="22" y="330.5" width="331" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Vancouver" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IcV-iP-Yp7">
-                                        <rect key="frame" x="0.0" y="0.0" width="277" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Vancouver" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IcV-iP-Yp7">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
+                                        <color key="tintColor" red="0.16955845059999999" green="0.57916377450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="zSB-P1-lTy"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="locationTextFieldTouchDownAction:" destination="BYZ-38-t0r" eventType="touchDown" id="awP-LF-v2m"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtL-xZ-tD3">
-                                        <rect key="frame" x="285" y="10" width="46" height="30"/>
-                                        <color key="tintColor" red="0.29123759269999999" green="0.62754619119999999" blue="0.93337327240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtL-xZ-tD3">
+                                        <rect key="frame" x="296" y="7.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="hkF-ua-kGx"/>
+                                            <constraint firstAttribute="width" secondItem="wtL-xZ-tD3" secondAttribute="height" multiplier="1:1" id="tQN-Qt-Aoc"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.2749813695414175" green="0.18414183858560512" blue="0.58800356099274609" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="LocateMe"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89452196480000001" green="0.90338973970000003" blue="0.91327315409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -114,6 +122,7 @@
                     <connections>
                         <outlet property="currentWeatherLabel" destination="t2B-w2-U0T" id="YFH-bM-ZAZ"/>
                         <outlet property="detailsButton" destination="yBH-cV-r9u" id="1x9-RD-Prs"/>
+                        <outlet property="infoLabel" destination="hZV-mK-5iK" id="RLt-Y2-rKv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,5 +167,8 @@
             <point key="canvasLocation" x="287" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LocateMe" width="1024" height="1024"/>
+    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
