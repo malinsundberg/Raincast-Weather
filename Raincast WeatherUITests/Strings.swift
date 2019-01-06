@@ -1,6 +1,6 @@
 //
 //  Strings.swift
-//  Raincast Weather
+//  Raincast WeatherUITests
 //
 //  Created by Malin Sundberg on 2019-01-05.
 //  Copyright © 2019 Malin Sundberg. All rights reserved.
