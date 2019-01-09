@@ -17,6 +17,7 @@
 		F4619F1C21E1700B003B9F1D /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */; };
 		F4619F2021E1D321003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1F21E1D321003B9F1D /* Strings.swift */; };
 		F4619F2221E1D630003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F2121E1D630003B9F1D /* Strings.swift */; };
+		F4619F2421E325BF003B9F1D /* TestTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F2321E325BE003B9F1D /* TestTestCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		F4619F1F21E1D321003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F4619F2121E1D630003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		F4619F2321E325BE003B9F1D /* TestTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTestCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */,
 				F441781721D3500F009748D3 /* Info.plist */,
 				F4619F2121E1D630003B9F1D /* Strings.swift */,
+				F4619F2321E325BE003B9F1D /* TestTestCases.swift */,
 			);
 			path = "Raincast WeatherUITests";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				F4619F2221E1D630003B9F1D /* Strings.swift in Sources */,
 				F441781621D3500F009748D3 /* Raincast_WeatherUITests.swift in Sources */,
+				F4619F2421E325BF003B9F1D /* TestTestCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
