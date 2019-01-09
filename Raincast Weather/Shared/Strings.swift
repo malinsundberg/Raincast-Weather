@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String {
+enum Strings {
     enum CurrentWeatherTexts {
         static let infoText = "Enter the location that you want to see the raincast for."
         static let currentWeatherVancouverText = "It's raining in Vancouver, obviously!"

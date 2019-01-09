@@ -47,10 +47,10 @@ class CurrentWeatherViewController: UIViewController {
     }
     
     private func setInfoLabelText() {
-        infoLabel.text = String.CurrentWeatherTexts.infoText
+        infoLabel.text = Strings.CurrentWeatherTexts.infoText
     }
     
     private func setCurrentWeatherLabelText() {
-        currentWeatherLabel.text = String.CurrentWeatherTexts.currentWeatherVancouverText
+        currentWeatherLabel.text = Strings.CurrentWeatherTexts.currentWeatherVancouverText
     }
 }
