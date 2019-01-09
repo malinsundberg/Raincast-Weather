@@ -19,6 +19,10 @@ class Raincast_WeatherUITests: XCTestCase {
 
     func testExample() {}
     
+    private func tapGoButton() {
+        app.navigationBars["Current Weather"].buttons["Go!"].tap()
+    }
+    
     func testThatInstructionTextIsDisplayed() {
         let instructionLabel = app.staticTexts[Strings.CurrentWeatherTexts.infoText]
         XCTAssertTrue(instructionLabel.exists)
@@ -57,7 +61,7 @@ class Raincast_WeatherUITests: XCTestCase {
         let currentWeatherLabel = app.staticTexts[Strings.CurrentWeatherTexts.currentWeatherVancouverText]
         let detailsButton = app.buttons["Details"]
         
-        app.navigationBars["Current Weather"].buttons["Go!"].tap()
+        tapGoButton()
         
         XCTAssertTrue(currentWeatherLabel.exists)
         XCTAssertTrue(detailsButton.exists)
@@ -87,8 +91,7 @@ class Raincast_WeatherUITests: XCTestCase {
         XCTAssertFalse(currentWeatherLabel.exists)
         XCTAssertFalse(detailsButton.exists)
         
-        let goButton = app.navigationBars["Current Weather"].buttons["Go!"]
-        goButton.tap()
+        tapGoButton()
         
         XCTAssertTrue(currentWeatherLabel.exists)
         XCTAssertTrue(detailsButton.exists)
