@@ -18,6 +18,18 @@
 		F4619F2021E1D321003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1F21E1D321003B9F1D /* Strings.swift */; };
 		F4619F2221E1D630003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F2121E1D630003B9F1D /* Strings.swift */; };
 		F4619F2421E325BF003B9F1D /* TestTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F2321E325BE003B9F1D /* TestTestCases.swift */; };
+		F485239E21F1B1F40081C413 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485239D21F1B1F40081C413 /* NetworkManager.swift */; };
+		F485239F21F1B1F40081C413 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485239D21F1B1F40081C413 /* NetworkManager.swift */; };
+		F48523A121F302590081C413 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A021F302580081C413 /* MockURLSessionDataTask.swift */; };
+		F48523A221F302590081C413 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A021F302580081C413 /* MockURLSessionDataTask.swift */; };
+		F48523A421F303850081C413 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A321F303850081C413 /* MockURLSession.swift */; };
+		F48523A521F303850081C413 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A321F303850081C413 /* MockURLSession.swift */; };
+		F48523A721F3E4440081C413 /* NetworkCallTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A621F3E4440081C413 /* NetworkCallTest.swift */; };
+		F48523A821F3E5FF0081C413 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485239D21F1B1F40081C413 /* NetworkManager.swift */; };
+		F48523AA21F3F0850081C413 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A921F3F0850081C413 /* Result.swift */; };
+		F48523AB21F3F0AF0081C413 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A921F3F0850081C413 /* Result.swift */; };
+		F48523AC21F3F0B00081C413 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A921F3F0850081C413 /* Result.swift */; };
+		F4CF7A3921EC3FCA00B025AF /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +67,12 @@
 		F4619F1F21E1D321003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F4619F2121E1D630003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F4619F2321E325BE003B9F1D /* TestTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTestCases.swift; sourceTree = "<group>"; };
+		F485239D21F1B1F40081C413 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F48523A021F302580081C413 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		F48523A321F303850081C413 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		F48523A621F3E4440081C413 /* NetworkCallTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallTest.swift; sourceTree = "<group>"; };
+		F48523A921F3F0850081C413 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +140,7 @@
 			children = (
 				F441780A21D3500F009748D3 /* Raincast_WeatherTests.swift */,
 				F441780C21D3500F009748D3 /* Info.plist */,
+				F48523A621F3E4440081C413 /* NetworkCallTest.swift */,
 			);
 			path = "Raincast WeatherTests";
 			sourceTree = "<group>";
@@ -129,10 +148,13 @@
 		F441781421D3500F009748D3 /* Raincast WeatherUITests */ = {
 			isa = PBXGroup;
 			children = (
+				F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */,
 				F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */,
 				F441781721D3500F009748D3 /* Info.plist */,
 				F4619F2121E1D630003B9F1D /* Strings.swift */,
 				F4619F2321E325BE003B9F1D /* TestTestCases.swift */,
+				F48523A021F302580081C413 /* MockURLSessionDataTask.swift */,
+				F48523A321F303850081C413 /* MockURLSession.swift */,
 			);
 			path = "Raincast WeatherUITests";
 			sourceTree = "<group>";
@@ -148,9 +170,19 @@
 		F4619F1E21E1D29E003B9F1D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F485239C21F1B1CB0081C413 /* Network calls */,
 				F4619F1F21E1D321003B9F1D /* Strings.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		F485239C21F1B1CB0081C413 /* Network calls */ = {
+			isa = PBXGroup;
+			children = (
+				F485239D21F1B1F40081C413 /* NetworkManager.swift */,
+				F48523A921F3F0850081C413 /* Result.swift */,
+			);
+			path = "Network calls";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48523AA21F3F0850081C413 /* Result.swift in Sources */,
 				F44177F821D3500D009748D3 /* ViewController.swift in Sources */,
 				F44177F621D3500D009748D3 /* AppDelegate.swift in Sources */,
+				F485239E21F1B1F40081C413 /* NetworkManager.swift in Sources */,
 				F4619F2021E1D321003B9F1D /* Strings.swift in Sources */,
 				F4619F1C21E1700B003B9F1D /* CurrentWeatherViewController.swift in Sources */,
 			);
@@ -295,7 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48523AB21F3F0AF0081C413 /* Result.swift in Sources */,
+				F48523A421F303850081C413 /* MockURLSession.swift in Sources */,
 				F441780B21D3500F009748D3 /* Raincast_WeatherTests.swift in Sources */,
+				F48523A821F3E5FF0081C413 /* NetworkManager.swift in Sources */,
+				F48523A721F3E4440081C413 /* NetworkCallTest.swift in Sources */,
+				F48523A121F302590081C413 /* MockURLSessionDataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +344,12 @@
 			files = (
 				F4619F2221E1D630003B9F1D /* Strings.swift in Sources */,
 				F441781621D3500F009748D3 /* Raincast_WeatherUITests.swift in Sources */,
+				F485239F21F1B1F40081C413 /* NetworkManager.swift in Sources */,
+				F48523A221F302590081C413 /* MockURLSessionDataTask.swift in Sources */,
+				F48523A521F303850081C413 /* MockURLSession.swift in Sources */,
 				F4619F2421E325BF003B9F1D /* TestTestCases.swift in Sources */,
+				F48523AC21F3F0B00081C413 /* Result.swift in Sources */,
+				F4CF7A3921EC3FCA00B025AF /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
