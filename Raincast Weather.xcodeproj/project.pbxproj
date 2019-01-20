@@ -35,6 +35,8 @@
 		F48523B221F401DE0081C413 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523B121F401DE0081C413 /* Config.swift */; };
 		F48523B321F401DE0081C413 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523B121F401DE0081C413 /* Config.swift */; };
 		F48523B421F401DE0081C413 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523B121F401DE0081C413 /* Config.swift */; };
+		F48523BB21F43B180081C413 /* MockPredictedWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = F48523BA21F43B170081C413 /* MockPredictedWeather.json */; };
+		F48523BC21F43B180081C413 /* MockPredictedWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = F48523BA21F43B170081C413 /* MockPredictedWeather.json */; };
 		F4CF7A3921EC3FCA00B025AF /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,7 @@
 		F48523A921F3F0850081C413 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F48523AF21F3F82B0081C413 /* UITestsWithMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsWithMockData.swift; sourceTree = "<group>"; };
 		F48523B121F401DE0081C413 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F48523BA21F43B170081C413 /* MockPredictedWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPredictedWeather.json; sourceTree = "<group>"; };
 		F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,14 +159,13 @@
 		F441781421D3500F009748D3 /* Raincast WeatherUITests */ = {
 			isa = PBXGroup;
 			children = (
+				F48523B521F431010081C413 /* Mocking */,
 				F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */,
 				F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */,
 				F48523AF21F3F82B0081C413 /* UITestsWithMockData.swift */,
 				F441781721D3500F009748D3 /* Info.plist */,
 				F4619F2121E1D630003B9F1D /* Strings.swift */,
 				F4619F2321E325BE003B9F1D /* TestTestCases.swift */,
-				F48523A021F302580081C413 /* MockURLSessionDataTask.swift */,
-				F48523A321F303850081C413 /* MockURLSession.swift */,
 			);
 			path = "Raincast WeatherUITests";
 			sourceTree = "<group>";
@@ -193,6 +195,16 @@
 				F48523B121F401DE0081C413 /* Config.swift */,
 			);
 			path = "Network calls";
+			sourceTree = "<group>";
+		};
+		F48523B521F431010081C413 /* Mocking */ = {
+			isa = PBXGroup;
+			children = (
+				F48523A021F302580081C413 /* MockURLSessionDataTask.swift */,
+				F48523A321F303850081C413 /* MockURLSession.swift */,
+				F48523BA21F43B170081C413 /* MockPredictedWeather.json */,
+			);
+			path = Mocking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48523BB21F43B180081C413 /* MockPredictedWeather.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48523BC21F43B180081C413 /* MockPredictedWeather.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

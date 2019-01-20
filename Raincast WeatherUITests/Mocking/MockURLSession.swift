@@ -9,18 +9,17 @@
 import Foundation
 
 class MockURLSession: URLSession {
-    private let data: Data?
-    private let error: Error?
+//    private let data: Data?
+    private let json: String
+//    private let error: Error?
     
-    init(data: Data? = nil, error: Error? = nil) {
-        self.data = data
-        self.error = error
+    init(data: Data? = nil, json: String, error: Error? = nil) {
+//        self.data = data
+        self.json = json
+//        self.error = error
     }
     
     override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-    
-        return MockURLSessionDataTask {
-            completionHandler(self.data, nil, nil)
-        }
+        return MockURLSessionDataTask(url: url, json: json, completion: completionHandler)
     }
 }

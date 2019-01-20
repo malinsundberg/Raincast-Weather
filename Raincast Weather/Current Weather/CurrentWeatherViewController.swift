@@ -49,10 +49,10 @@ class CurrentWeatherViewController: UIViewController {
     }
     
     private func setInfoLabelText() {
-//        retrieveData() { dataString in
-//            self.infoLabel.text = dataString
-//        }
-        infoLabel.text = Strings.CurrentWeatherTexts.infoText
+        retrieveData() { expectedWeather in
+            self.infoLabel.text = expectedWeather
+        }
+//        infoLabel.text = Strings.CurrentWeatherTexts.infoText
     }
     
     private func setCurrentWeatherLabelText() {
@@ -73,8 +73,9 @@ class CurrentWeatherViewController: UIViewController {
         manager.retrieveData(from: url) { result in
             switch result {
             case .success(let data):
-                if let returnString = String(bytes: data, encoding: .utf8) {
-                    callback(returnString)
+                let jsonDecoder = JSONDecoder()
+                if let weatherData = try? jsonDecoder.decode(WeatherData.self, from: data) {
+                    callback(weatherData.expectedWeather)
                 } else {
                     callback(Strings.CurrentWeatherTexts.Errors.couldNotRetrieveCurrentWeather)
                 }
@@ -83,4 +84,8 @@ class CurrentWeatherViewController: UIViewController {
             }
         }
     }
+}
+
+struct WeatherData: Codable {
+    let expectedWeather: String
 }

@@ -9,12 +9,18 @@
 import Foundation
 
 struct Config {
-    static let urlSession: URLSession = UITesting ? setUpMockSessionWithData() : URLSession.shared
+    static let urlSession: URLSession = UITesting ? (setUpMockSessionWithData() ?? URLSession.shared) : URLSession.shared
 }
 
-private func setUpMockSessionWithData() -> MockURLSession {
-    let data = String("Hello").data(using: .utf8)
-    return MockURLSession(data: data)
+private func setUpMockSessionWithData() -> MockURLSession? {
+    guard let path = ProcessInfo.processInfo.environment["NetworkStubNameBundle"],
+          let bundle = Bundle(path: path),
+          let resource = bundle.path(forResource: ProcessInfo.processInfo.environment["NetworkStubFileNameWeather"], ofType: nil),
+          let json = try? String(contentsOfFile: resource, encoding: .utf8) else {
+        return nil
+    }
+    
+    return MockURLSession(json: json)
 }
 
 private let UITesting = ProcessInfo.processInfo.arguments.contains("UI-TESTING")

@@ -15,13 +15,20 @@ class UITestsWithMockData: XCTestCase {
         continueAfterFailure = false
 
         app.launchArguments += ["UI-TESTING"]
+        
+        app.launchEnvironment = [
+            "NetworkStubNameBundle": Bundle(for: type(of: self)).bundlePath,
+            "NetworkStubFileNameWeather": "MockPredictedWeather.json"
+        ]
+        
         app.launch()
     }
 
     override func tearDown() {}
 
     func testExample() {
-        let instructionLabel = app.staticTexts["Hello"]
+        let instructionLabel = app.staticTexts["It will most likely rain today"]
+
         XCTAssertTrue(instructionLabel.exists)
     }
 
