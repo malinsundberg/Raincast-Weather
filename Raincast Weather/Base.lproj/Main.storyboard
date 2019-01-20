@@ -115,7 +115,7 @@
                     <navigationItem key="navigationItem" title="Current Weather" id="juT-SE-QPR">
                         <barButtonItem key="rightBarButtonItem" title="Go!" id="TSp-K0-MSM">
                             <connections>
-                                <action selector="displayWeatherButtonAction:" destination="BYZ-38-t0r" id="6gW-eL-cEs"/>
+                                <action selector="displayWeatherButtonAction:" destination="BYZ-38-t0r" id="hF2-XE-hi1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,6 +123,7 @@
                     <connections>
                         <outlet property="currentWeatherLabel" destination="t2B-w2-U0T" id="YFH-bM-ZAZ"/>
                         <outlet property="detailsButton" destination="yBH-cV-r9u" id="1x9-RD-Prs"/>
+                        <outlet property="displayWeatherButton" destination="TSp-K0-MSM" id="8mr-E3-lBi"/>
                         <outlet property="infoLabel" destination="hZV-mK-5iK" id="RLt-Y2-rKv"/>
                     </connections>
                 </viewController>

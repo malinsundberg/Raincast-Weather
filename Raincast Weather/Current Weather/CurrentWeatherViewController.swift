@@ -30,12 +30,14 @@ class CurrentWeatherViewController: UIViewController {
         shouldDisplayAdditionalInfo = false
     }
     
+    @IBOutlet weak var displayWeatherButton: UIBarButtonItem!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var currentWeatherLabel: UILabel!
     @IBOutlet weak var detailsButton: UIButton!
     
     @IBAction func displayWeatherButtonAction(_ sender: UIBarButtonItem) {
         setCurrentWeatherLabelText()
+        
         shouldDisplayAdditionalInfo = true
     }
     
@@ -47,20 +49,27 @@ class CurrentWeatherViewController: UIViewController {
     }
     
     private func setInfoLabelText() {
-        retrieveData() { dataString in
-            self.infoLabel.text = dataString
-        }
+//        retrieveData() { dataString in
+//            self.infoLabel.text = dataString
+//        }
+        infoLabel.text = Strings.CurrentWeatherTexts.infoText
     }
     
     private func setCurrentWeatherLabelText() {
-        currentWeatherLabel.text = Strings.CurrentWeatherTexts.currentWeatherVancouverText
+        displayWeatherButton.isEnabled = false
+        
+        self.retrieveData() { [weak self] currentWeatherString in
+            DispatchQueue.main.async {
+                self?.currentWeatherLabel.text = currentWeatherString
+                self?.displayWeatherButton.isEnabled = true
+            }
+        }
     }
     
     private func retrieveData(with callback: @escaping (String) -> ()) {
         let manager = NetworkManager()
         let url = URL(fileURLWithPath: "url")
 
-        
         manager.retrieveData(from: url) { result in
             switch result {
             case .success(let data):
