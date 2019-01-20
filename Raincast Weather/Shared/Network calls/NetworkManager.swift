@@ -29,16 +29,3 @@ class NetworkManager {
         networkTask.resume()
     }
 }
-
-struct Config {
-    static let urlSession: URLSession = UITesting() ? setUpMockSessionWithData() : URLSession.shared
-}
-
-private func setUpMockSessionWithData() -> MockURLSession {
-    let data = String("Hello").data(using: .utf8)
-    return MockURLSession(data: data)
-}
-
-private func UITesting() -> Bool {
-    return ProcessInfo.processInfo.arguments.contains("UI-TESTING")
-}
