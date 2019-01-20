@@ -9,10 +9,10 @@
 import Foundation
 
 class MockURLSession: URLSession {
-    private let data: Data
+    private let data: Data?
     private let error: Error?
     
-    init(data: Data, error: Error? = nil) {
+    init(data: Data? = nil, error: Error? = nil) {
         self.data = data
         self.error = error
     }
@@ -20,7 +20,7 @@ class MockURLSession: URLSession {
     override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
     
         return MockURLSessionDataTask {
-            completionHandler(self.data, nil, self.error)
+            completionHandler(self.data, nil, nil)
         }
     }
 }

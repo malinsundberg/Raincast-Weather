@@ -11,7 +11,7 @@ import Foundation
 class NetworkManager {
     private let session: URLSession
     
-    init(session: URLSession = .shared) {
+    init(session: URLSession = Config.urlSession) {
         self.session = session
     }
     
@@ -28,4 +28,18 @@ class NetworkManager {
         
         networkTask.resume()
     }
+}
+
+
+struct Config {
+    static let urlSession: URLSession = UITesting() ? setUpMockSessionWithData() : URLSession.shared
+}
+
+private func setUpMockSessionWithData() -> MockURLSession {
+    let data = Data(bytes: [1,2,3,4])
+    return MockURLSession(data: data)
+}
+
+private func UITesting() -> Bool {
+    return ProcessInfo.processInfo.arguments.contains("UI-TESTING")
 }

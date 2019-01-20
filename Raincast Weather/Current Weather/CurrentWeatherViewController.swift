@@ -47,10 +47,32 @@ class CurrentWeatherViewController: UIViewController {
     }
     
     private func setInfoLabelText() {
-        infoLabel.text = Strings.CurrentWeatherTexts.infoText
+        retrieveData() { dataString in
+            self.infoLabel.text = dataString
+        }
     }
     
     private func setCurrentWeatherLabelText() {
         currentWeatherLabel.text = Strings.CurrentWeatherTexts.currentWeatherVancouverText
+    }
+    
+    private func retrieveData(with callback: @escaping (String) -> ()) {
+        let manager = NetworkManager()
+        let url = URL(fileURLWithPath: "url")
+
+        
+        manager.retrieveData(from: url) { result in
+            switch result {
+            case .success(let data):
+                print(data)
+                if let returnString = String(bytes: data, encoding: .utf8) {
+                    callback(returnString)
+                } else {
+                    callback("Could not get the string!")
+                }
+            case .failure:
+                callback("Was not able to get data!")
+            }
+        }
     }
 }
