@@ -21,7 +21,7 @@ class UITestsWithMockData: XCTestCase {
     override func tearDown() {}
 
     func testExample() {
-        let instructionLabel = app.staticTexts[Strings.CurrentWeatherTexts.infoText]
+        let instructionLabel = app.staticTexts["Hello"]
         XCTAssertTrue(instructionLabel.exists)
     }
 
