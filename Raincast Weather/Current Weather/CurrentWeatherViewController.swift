@@ -73,14 +73,13 @@ class CurrentWeatherViewController: UIViewController {
         manager.retrieveData(from: url) { result in
             switch result {
             case .success(let data):
-                print(data)
                 if let returnString = String(bytes: data, encoding: .utf8) {
                     callback(returnString)
                 } else {
-                    callback("Could not get the string!")
+                    callback(Strings.CurrentWeatherTexts.Errors.couldNotRetrieveCurrentWeather)
                 }
             case .failure:
-                callback("Was not able to get data!")
+                callback(Strings.CurrentWeatherTexts.Errors.couldNotRetrieveCurrentWeather)
             }
         }
     }

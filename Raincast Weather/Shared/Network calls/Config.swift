@@ -9,7 +9,7 @@
 import Foundation
 
 struct Config {
-    static let urlSession: URLSession = UITesting() ? setUpMockSessionWithData() : URLSession.shared
+    static let urlSession: URLSession = UITesting ? setUpMockSessionWithData() : URLSession.shared
 }
 
 private func setUpMockSessionWithData() -> MockURLSession {
@@ -17,6 +17,4 @@ private func setUpMockSessionWithData() -> MockURLSession {
     return MockURLSession(data: data)
 }
 
-private func UITesting() -> Bool {
-    return ProcessInfo.processInfo.arguments.contains("UI-TESTING")
-}
+private let UITesting = ProcessInfo.processInfo.arguments.contains("UI-TESTING")
