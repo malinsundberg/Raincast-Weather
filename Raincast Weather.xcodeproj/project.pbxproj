@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F44177F621D3500D009748D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44177F521D3500D009748D3 /* AppDelegate.swift */; };
-		F44177F821D3500D009748D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44177F721D3500D009748D3 /* ViewController.swift */; };
 		F44177FB21D3500D009748D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44177F921D3500D009748D3 /* Main.storyboard */; };
 		F44177FD21D3500F009748D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44177FC21D3500F009748D3 /* Assets.xcassets */; };
 		F441780021D3500F009748D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44177FE21D3500F009748D3 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 		F4619F1C21E1700B003B9F1D /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */; };
 		F4619F2021E1D321003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1F21E1D321003B9F1D /* Strings.swift */; };
 		F4619F2221E1D630003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F2121E1D630003B9F1D /* Strings.swift */; };
-		F4619F2421E325BF003B9F1D /* TestTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F2321E325BE003B9F1D /* TestTestCases.swift */; };
 		F485239E21F1B1F40081C413 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485239D21F1B1F40081C413 /* NetworkManager.swift */; };
 		F485239F21F1B1F40081C413 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485239D21F1B1F40081C413 /* NetworkManager.swift */; };
 		F48523A121F302590081C413 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48523A021F302580081C413 /* MockURLSessionDataTask.swift */; };
@@ -60,7 +58,6 @@
 /* Begin PBXFileReference section */
 		F44177F221D3500D009748D3 /* Raincast Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raincast Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44177F521D3500D009748D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F44177F721D3500D009748D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F44177FA21D3500D009748D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F44177FC21D3500F009748D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44177FF21D3500F009748D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +71,6 @@
 		F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		F4619F1F21E1D321003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F4619F2121E1D630003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		F4619F2321E325BE003B9F1D /* TestTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTestCases.swift; sourceTree = "<group>"; };
 		F485239D21F1B1F40081C413 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F48523A021F302580081C413 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		F48523A321F303850081C413 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
@@ -111,6 +107,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4076DD121FAB81C00D2043B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F4619F2121E1D630003B9F1D /* Strings.swift */,
+				F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F4076DD321FAB8AF00D2043B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F44177FC21D3500F009748D3 /* Assets.xcassets */,
+				F441780121D3500F009748D3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4076DD421FAB96000D2043B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F441781721D3500F009748D3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4076DD521FABBA600D2043B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */,
+				F48523AF21F3F82B0081C413 /* UITestsWithMockData.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		F44177E921D3500C009748D3 = {
 			isa = PBXGroup;
 			children = (
@@ -134,14 +165,9 @@
 		F44177F421D3500D009748D3 /* Raincast Weather */ = {
 			isa = PBXGroup;
 			children = (
-				F4619F1E21E1D29E003B9F1D /* Shared */,
 				F4619F1A21E16FBA003B9F1D /* Current Weather */,
-				F44177F521D3500D009748D3 /* AppDelegate.swift */,
-				F44177F721D3500D009748D3 /* ViewController.swift */,
-				F44177F921D3500D009748D3 /* Main.storyboard */,
-				F44177FC21D3500F009748D3 /* Assets.xcassets */,
-				F44177FE21D3500F009748D3 /* LaunchScreen.storyboard */,
-				F441780121D3500F009748D3 /* Info.plist */,
+				F4076DD321FAB8AF00D2043B /* Supporting Files */,
+				F4619F1E21E1D29E003B9F1D /* Shared */,
 			);
 			path = "Raincast Weather";
 			sourceTree = "<group>";
@@ -159,13 +185,10 @@
 		F441781421D3500F009748D3 /* Raincast WeatherUITests */ = {
 			isa = PBXGroup;
 			children = (
+				F4076DD521FABBA600D2043B /* Tests */,
+				F4076DD421FAB96000D2043B /* Supporting Files */,
+				F4076DD121FAB81C00D2043B /* Helpers */,
 				F48523B521F431010081C413 /* Mocking */,
-				F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */,
-				F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */,
-				F48523AF21F3F82B0081C413 /* UITestsWithMockData.swift */,
-				F441781721D3500F009748D3 /* Info.plist */,
-				F4619F2121E1D630003B9F1D /* Strings.swift */,
-				F4619F2321E325BE003B9F1D /* TestTestCases.swift */,
 			);
 			path = "Raincast WeatherUITests";
 			sourceTree = "<group>";
@@ -181,8 +204,11 @@
 		F4619F1E21E1D29E003B9F1D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				F485239C21F1B1CB0081C413 /* Network calls */,
+				F44177F921D3500D009748D3 /* Main.storyboard */,
+				F44177FE21D3500F009748D3 /* LaunchScreen.storyboard */,
 				F4619F1F21E1D321003B9F1D /* Strings.swift */,
+				F44177F521D3500D009748D3 /* AppDelegate.swift */,
+				F485239C21F1B1CB0081C413 /* Network calls */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -341,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48523AA21F3F0850081C413 /* Result.swift in Sources */,
-				F44177F821D3500D009748D3 /* ViewController.swift in Sources */,
 				F48523B221F401DE0081C413 /* Config.swift in Sources */,
 				F44177F621D3500D009748D3 /* AppDelegate.swift in Sources */,
 				F485239E21F1B1F40081C413 /* NetworkManager.swift in Sources */,
@@ -376,7 +401,6 @@
 				F48523A221F302590081C413 /* MockURLSessionDataTask.swift in Sources */,
 				F48523A521F303850081C413 /* MockURLSession.swift in Sources */,
 				F48523B021F3F82B0081C413 /* UITestsWithMockData.swift in Sources */,
-				F4619F2421E325BF003B9F1D /* TestTestCases.swift in Sources */,
 				F48523B421F401DE0081C413 /* Config.swift in Sources */,
 				F48523AC21F3F0B00081C413 /* Result.swift in Sources */,
 				F4CF7A3921EC3FCA00B025AF /* SnapshotHelper.swift in Sources */,
@@ -540,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C58BUT9PYW;
-				INFOPLIST_FILE = "Raincast Weather/Info.plist";
+				INFOPLIST_FILE = "Raincast Weather/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C58BUT9PYW;
-				INFOPLIST_FILE = "Raincast Weather/Info.plist";
+				INFOPLIST_FILE = "Raincast Weather/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,7 +642,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C58BUT9PYW;
-				INFOPLIST_FILE = "Raincast WeatherUITests/Info.plist";
+				INFOPLIST_FILE = "Raincast WeatherUITests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -638,7 +662,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C58BUT9PYW;
-				INFOPLIST_FILE = "Raincast WeatherUITests/Info.plist";
+				INFOPLIST_FILE = "Raincast WeatherUITests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

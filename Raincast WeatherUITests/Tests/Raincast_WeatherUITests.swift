@@ -39,7 +39,7 @@ class Raincast_WeatherUITests: XCTestCase {
     }
     
     func testThatTextRemovedWhenTextFieldTapped() {
-        let textFieldElement = app.textFields.containing(.button, identifier:Strings.CurrentWeatherTexts.textFieldIdentifier).element
+        let textFieldElement = app.textFields.containing(.button, 		identifier:Strings.CurrentWeatherTexts.textFieldIdentifier).element
         
         XCTAssertTrue(textFieldElement.exists)
         XCTAssertTrue(textFieldElement.isEnabled)
