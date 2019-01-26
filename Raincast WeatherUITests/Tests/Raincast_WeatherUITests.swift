@@ -38,36 +38,6 @@ class Raincast_WeatherUITests: XCTestCase {
 //        XCTAssertTrue(textFieldElement.value as! String == Strings.CurrentWeatherTexts.textFieldDefaultText)
     }
     
-    func testThatTextRemovedWhenTextFieldTapped() {
-        let textFieldElement = app.textFields.containing(.button, 		identifier:Strings.CurrentWeatherTexts.textFieldIdentifier).element
-        
-        XCTAssertTrue(textFieldElement.exists)
-        XCTAssertTrue(textFieldElement.isEnabled)
-        
-        XCTAssertTrue(textFieldElement.value as! String == Strings.CurrentWeatherTexts.textFieldDefaultText)
-        
-        textFieldElement.tap()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            XCTAssertTrue(textFieldElement.value as! String != Strings.CurrentWeatherTexts.textFieldDefaultText)
-        })
-    }
-    
-    func testTextFieldTapHidesElements() {
-        let currentWeatherLabel = app.staticTexts[Strings.CurrentWeatherTexts.currentWeatherVancouverText]
-        let detailsButton = app.buttons[Strings.CurrentWeatherTexts.detailsButtonTitle]
-        
-        app.navigationBars[Strings.CurrentWeatherTexts.title].buttons[Strings.CurrentWeatherTexts.goButtonTitle].tap()
-        
-        XCTAssertTrue(currentWeatherLabel.exists)
-        XCTAssertTrue(detailsButton.exists)
-        
-        app.textFields.containing(.button, identifier:Strings.CurrentWeatherTexts.textFieldIdentifier).element.tap()
-        
-        XCTAssertFalse(currentWeatherLabel.exists)
-        XCTAssertFalse(detailsButton.exists)
-    }
-    
     func testGoButtonExists() {
         let goButton = app.navigationBars[Strings.CurrentWeatherTexts.title].buttons[Strings.CurrentWeatherTexts.goButtonTitle]
         
@@ -93,6 +63,33 @@ class Raincast_WeatherUITests: XCTestCase {
         XCTAssertTrue(detailsButton.exists)
     }
     
-    func testThatInfoLabelIsDisplayed() {
+    func testTextFieldTapHidesElements() {
+        let currentWeatherLabel = app.staticTexts[Strings.CurrentWeatherTexts.currentWeatherVancouverText]
+        let detailsButton = app.buttons[Strings.CurrentWeatherTexts.detailsButtonTitle]
+        
+        app.navigationBars[Strings.CurrentWeatherTexts.title].buttons[Strings.CurrentWeatherTexts.goButtonTitle].tap()
+        
+        XCTAssertTrue(currentWeatherLabel.exists)
+        XCTAssertTrue(detailsButton.exists)
+        
+        app.textFields.containing(.button, identifier:Strings.CurrentWeatherTexts.textFieldIdentifier).element.tap()
+        
+        XCTAssertFalse(currentWeatherLabel.exists)
+        XCTAssertFalse(detailsButton.exists)
+    }
+    
+    func testThatDefaultTextRemovedWhenTextFieldTapped() {
+        let textFieldElement = app.textFields.containing(.button, 		identifier:Strings.CurrentWeatherTexts.textFieldIdentifier).element
+        
+        XCTAssertTrue(textFieldElement.exists)
+        XCTAssertTrue(textFieldElement.isEnabled)
+        
+        XCTAssertTrue(textFieldElement.value as! String == Strings.CurrentWeatherTexts.textFieldDefaultText)
+        
+        textFieldElement.tap()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            XCTAssertTrue(textFieldElement.value as! String != Strings.CurrentWeatherTexts.textFieldDefaultText)
+        })
     }
 }
