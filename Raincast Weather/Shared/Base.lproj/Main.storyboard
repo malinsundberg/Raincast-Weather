@@ -31,8 +31,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the label indicating the weather forcast" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2B-w2-U0T">
-                                <rect key="frame" x="22" y="479.5" width="370" height="50.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <rect key="frame" x="22" y="479.5" width="370" height="55"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -73,7 +73,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBH-cV-r9u">
-                                <rect key="frame" x="159.5" y="562" width="95" height="40"/>
+                                <rect key="frame" x="159.5" y="566.5" width="95" height="40"/>
                                 <color key="backgroundColor" red="0.29123759269999999" green="0.62754619119999999" blue="0.93337327240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="DetailsButton"/>
                                 <constraints>

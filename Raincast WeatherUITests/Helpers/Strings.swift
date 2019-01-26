@@ -15,7 +15,7 @@ enum Strings {
         static let infoText = "Enter the location that you want to see the raincast for."
         static let textFieldIdentifier = "Clear text"
         static let textFieldDefaultText = "Vancouver"
-        static let currentWeatherVancouverText = "It's raining in Vancouver, obviously!"
+        static let currentWeatherVancouverText = "It's raining in Vancouver, as usual 😉"
         static let detailsButtonTitle = "Details"
     }
 }

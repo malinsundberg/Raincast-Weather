@@ -53,16 +53,7 @@ class CurrentWeatherViewController: UIViewController {
     }
     
     private func setCurrentWeatherLabelText() {
-        displayWeatherButton.isEnabled = false
-        
         currentWeatherLabel.text = Strings.CurrentWeatherTexts.currentWeatherVancouverText
-        
-//        self.retrieveData() { [weak self] currentWeatherString in
-//            DispatchQueue.main.async {
-//                self?.currentWeatherLabel.text = currentWeatherString
-//                self?.displayWeatherButton.isEnabled = true
-//            }
-//        }
     }
     
     private func retrieveData(with callback: @escaping (String) -> ()) {

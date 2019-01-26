@@ -11,7 +11,7 @@ import Foundation
 enum Strings {
     enum CurrentWeatherTexts {
         static let infoText = "Enter the location that you want to see the raincast for."
-        static let currentWeatherVancouverText = "It's raining in Vancouver, obviously!"
+        static let currentWeatherVancouverText = "It's raining in Vancouver, as usual 😉"
      
         enum Errors {
             static let couldNotRetrieveCurrentWeather = "There was a problem getting the weather for this location."
