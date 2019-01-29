@@ -14,14 +14,11 @@ class CurrentWeatherViewController: UIViewController {
             if newValue {
                 UIView.animate(withDuration: 0.2, animations: {
                     self.currentWeatherLabel.alpha = 1.0
-                    self.detailsButton.alpha = 1.0
                 })
             } else {
                 UIView.animate(withDuration: 0.2, animations: {
                     self.currentWeatherLabel.alpha = 0.0
-                    self.detailsButton.alpha = 0.0
-                })
-                
+                })   
             }
         }
     }
@@ -33,8 +30,7 @@ class CurrentWeatherViewController: UIViewController {
     @IBOutlet weak var displayWeatherButton: UIBarButtonItem!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var currentWeatherLabel: UILabel!
-    @IBOutlet weak var detailsButton: UIButton!
-    
+
     @IBAction func displayWeatherButtonAction(_ sender: UIBarButtonItem) {
         setCurrentWeatherLabelText()
         

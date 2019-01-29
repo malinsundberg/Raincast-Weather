@@ -24,15 +24,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label will display crusial information telling the user how to use the app" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-mK-5iK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label will display importnat information telling the user how to use the app" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-mK-5iK">
                                 <rect key="frame" x="22" y="305.5" width="370" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the label indicating the weather forcast" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2B-w2-U0T">
-                                <rect key="frame" x="22" y="479.5" width="370" height="55"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -72,42 +66,26 @@
                                     <constraint firstAttribute="trailing" secondItem="wtL-xZ-tD3" secondAttribute="trailing" id="xu6-Mk-MFO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBH-cV-r9u">
-                                <rect key="frame" x="159.5" y="566.5" width="95" height="40"/>
-                                <color key="backgroundColor" red="0.29123759269999999" green="0.62754619119999999" blue="0.93337327240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <accessibility key="accessibilityConfiguration" identifier="DetailsButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1YM-ta-9AZ"/>
-                                    <constraint firstAttribute="width" constant="95" id="iLp-jI-gM9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Details">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the label indicating the weather forcast" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2B-w2-U0T">
+                                <rect key="frame" x="22" y="479.5" width="370" height="55"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.89452196477102164" green="0.90338973974012671" blue="0.9132731541450777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.89411764705882346" green="0.90196078431372551" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="GTI-lN-i9b" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5zn-md-00n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hZV-mK-5iK" secondAttribute="trailing" constant="22" id="6Kq-mj-bGS"/>
-                            <constraint firstItem="t2B-w2-U0T" firstAttribute="top" secondItem="IcV-iP-Yp7" secondAttribute="bottom" constant="75" id="BLC-eT-FD6"/>
-                            <constraint firstItem="yBH-cV-r9u" firstAttribute="top" secondItem="t2B-w2-U0T" secondAttribute="bottom" constant="32" id="FgY-1p-xaL"/>
+                            <constraint firstItem="t2B-w2-U0T" firstAttribute="trailing" secondItem="4BV-Pg-aP6" secondAttribute="trailing" id="BfG-Gp-r1e"/>
                             <constraint firstItem="t2B-w2-U0T" firstAttribute="leading" secondItem="4BV-Pg-aP6" secondAttribute="leading" id="FiY-O5-1lq"/>
                             <constraint firstItem="GTI-lN-i9b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="OHH-M4-nTR"/>
                             <constraint firstItem="4BV-Pg-aP6" firstAttribute="leading" secondItem="hZV-mK-5iK" secondAttribute="leading" id="XK8-6n-kpP"/>
                             <constraint firstItem="hZV-mK-5iK" firstAttribute="top" secondItem="GTI-lN-i9b" secondAttribute="bottom" constant="8" id="beK-JZ-f8t"/>
-                            <constraint firstItem="4BV-Pg-aP6" firstAttribute="width" secondItem="hZV-mK-5iK" secondAttribute="width" id="nfD-gB-nz6"/>
                             <constraint firstItem="4BV-Pg-aP6" firstAttribute="trailing" secondItem="hZV-mK-5iK" secondAttribute="trailing" id="pAd-Bt-Jht"/>
+                            <constraint firstItem="t2B-w2-U0T" firstAttribute="top" secondItem="4BV-Pg-aP6" secondAttribute="bottom" constant="75" id="r6k-gR-Pfe"/>
                             <constraint firstItem="hZV-mK-5iK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="ss2-L7-rFg"/>
                             <constraint firstItem="4BV-Pg-aP6" firstAttribute="top" secondItem="hZV-mK-5iK" secondAttribute="bottom" constant="8" id="uVq-tD-2NG"/>
-                            <constraint firstItem="yBH-cV-r9u" firstAttribute="centerX" secondItem="t2B-w2-U0T" secondAttribute="centerX" id="vXm-pe-4nr"/>
-                            <constraint firstItem="t2B-w2-U0T" firstAttribute="trailing" secondItem="4BV-Pg-aP6" secondAttribute="trailing" id="wi4-kh-l5o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -122,7 +100,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currentWeatherLabel" destination="t2B-w2-U0T" id="YFH-bM-ZAZ"/>
-                        <outlet property="detailsButton" destination="yBH-cV-r9u" id="1x9-RD-Prs"/>
                         <outlet property="displayWeatherButton" destination="TSp-K0-MSM" id="8mr-E3-lBi"/>
                         <outlet property="infoLabel" destination="hZV-mK-5iK" id="RLt-Y2-rKv"/>
                     </connections>
@@ -130,21 +107,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="132.68365817091455"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Bj3-Sa-mfd">
-            <objects>
-                <viewController id="GSs-Hz-M3j" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xij-6b-59o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="nMc-fw-o4o"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xvp-Ph-uay" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1871.2" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xgz-eH-XEf">
