@@ -23,4 +23,4 @@ private func setUpMockSessionWithData() -> MockURLSession? {
     return MockURLSession(json: json)
 }
 
-private let UITesting = ProcessInfo.processInfo.arguments.contains("UI-TESTING")
+private let UITesting = ProcessInfo.processInfo.environment["Environment"] == "UI-TESTING"

@@ -14,9 +14,8 @@ class UITestsWithMockData: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
 
-        app.launchArguments += ["UI-TESTING"]
-        
         app.launchEnvironment = [
+            "Environment": "UI-TESTING",
             "NetworkStubNameBundle": Bundle(for: type(of: self)).bundlePath,
             "NetworkStubFileNameWeather": "MockPredictedWeather.json"
         ]
