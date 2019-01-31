@@ -19,7 +19,7 @@ class Raincast_WeatherUITests: XCTestCase {
     
     func testThatInstructionTextIsDisplayed() {
         let instructionLabel = app.staticTexts[Strings.CurrentWeatherTexts.infoText]
-        XCTAssertTrue(instructionLabel.exists)
+        XCTAssertTrue(instructionLabel.isHittable)
     }
     
     func testThatTextFieldExists() {
@@ -56,16 +56,16 @@ class Raincast_WeatherUITests: XCTestCase {
         XCTAssertTrue(currentWeatherLabel.waitForExistence(timeout: 2))
     }
     
-    func testTextFieldTapHidesElements() {
+    func testTextFieldTapHidesLabel() {
         let currentWeatherLabel = app.staticTexts[Strings.CurrentWeatherTexts.currentWeatherVancouverText]
         
         app.navigationBars[Strings.CurrentWeatherTexts.title].buttons[Strings.CurrentWeatherTexts.goButtonTitle].tap()
         
-        XCTAssertTrue(currentWeatherLabel.exists)
+        XCTAssertTrue(currentWeatherLabel.isHittable)
         
         app.textFields.containing(.button, identifier:Strings.CurrentWeatherTexts.textFieldIdentifier).element.tap()
         
-        XCTAssertFalse(currentWeatherLabel.exists)
+        XCTAssertFalse(currentWeatherLabel.waitForExistence(timeout: 2))
     }
     
     func testThatDefaultTextRemovedWhenTextFieldTapped() {
