@@ -1,3 +1,3 @@
 # Raincast-Weather
 
-This is a demo app for UI testing.
+This is a simple weather app to demo UI testing.
