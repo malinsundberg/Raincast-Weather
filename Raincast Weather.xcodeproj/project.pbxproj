@@ -13,6 +13,7 @@
 		F441780021D3500F009748D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44177FE21D3500F009748D3 /* LaunchScreen.storyboard */; };
 		F441780B21D3500F009748D3 /* Raincast_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441780A21D3500F009748D3 /* Raincast_WeatherTests.swift */; };
 		F441781621D3500F009748D3 /* Raincast_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */; };
+		F452C0F124160B8A0044198A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F452C0F024160B8A0044198A /* Colors.xcassets */; };
 		F4619F1C21E1700B003B9F1D /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */; };
 		F4619F2021E1D321003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F1F21E1D321003B9F1D /* Strings.swift */; };
 		F4619F2221E1D630003B9F1D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4619F2121E1D630003B9F1D /* Strings.swift */; };
@@ -36,6 +37,7 @@
 		F48523BB21F43B180081C413 /* MockPredictedWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = F48523BA21F43B170081C413 /* MockPredictedWeather.json */; };
 		F48523BC21F43B180081C413 /* MockPredictedWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = F48523BA21F43B170081C413 /* MockPredictedWeather.json */; };
 		F4CF7A3921EC3FCA00B025AF /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */; };
+		F4E004382418BB3D00D29DCC /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E004372418BB3D00D29DCC /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,7 @@
 		F441781121D3500F009748D3 /* Raincast WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Raincast WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F441781521D3500F009748D3 /* Raincast_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raincast_WeatherUITests.swift; sourceTree = "<group>"; };
 		F441781721D3500F009748D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F452C0F024160B8A0044198A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		F4619F1F21E1D321003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F4619F2121E1D630003B9F1D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		F48523B121F401DE0081C413 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F48523BA21F43B170081C413 /* MockPredictedWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPredictedWeather.json; sourceTree = "<group>"; };
 		F4CF7A3821EC3FC900B025AF /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		F4E004372418BB3D00D29DCC /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			children = (
 				F44177FC21D3500F009748D3 /* Assets.xcassets */,
 				F441780121D3500F009748D3 /* Info.plist */,
+				F452C0F024160B8A0044198A /* Colors.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				F4619F1B21E1700B003B9F1D /* CurrentWeatherViewController.swift */,
+				F4E004372418BB3D00D29DCC /* NavigationViewController.swift */,
 			);
 			path = "Current Weather";
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F441780021D3500F009748D3 /* LaunchScreen.storyboard in Resources */,
+				F452C0F124160B8A0044198A /* Colors.xcassets in Resources */,
 				F44177FD21D3500F009748D3 /* Assets.xcassets in Resources */,
 				F44177FB21D3500D009748D3 /* Main.storyboard in Resources */,
 			);
@@ -369,6 +376,7 @@
 				F48523AA21F3F0850081C413 /* Result.swift in Sources */,
 				F48523B221F401DE0081C413 /* Config.swift in Sources */,
 				F44177F621D3500D009748D3 /* AppDelegate.swift in Sources */,
+				F4E004382418BB3D00D29DCC /* NavigationViewController.swift in Sources */,
 				F485239E21F1B1F40081C413 /* NetworkManager.swift in Sources */,
 				F48523AD21F3F6F10081C413 /* MockURLSession.swift in Sources */,
 				F48523AE21F3F70B0081C413 /* MockURLSessionDataTask.swift in Sources */,
@@ -493,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -548,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -571,7 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malinsundberg.Raincast-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -589,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malinsundberg.Raincast-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
